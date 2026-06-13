@@ -101,6 +101,7 @@ public class MainActivity extends BaseActivity implements ConversionListener {
                     String senderId = documentChange.getDocument().getString(Constants.KEY_SENDER_ID);
                     String receiverId = documentChange.getDocument().getString(Constants.KEY_RECEIVER_ID);
                     ChatMessage chatMessage =new ChatMessage();
+                    chatMessage.senderId = senderId;
                     chatMessage.receiverId = receiverId;
                     if (preferenceManager.getString(Constants.KEY_USER_ID).equals(senderId)){
                         chatMessage.conversionImage = documentChange.getDocument().getString(Constants.KEY_RECEIVER_IMAGE);

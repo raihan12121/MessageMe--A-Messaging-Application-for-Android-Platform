@@ -384,7 +384,7 @@ public class ChatActivity extends BaseActivity {
         DocumentReference documentReference = database.collection(Constants.KEY_COLLECTION_CONVERSATIONS)
                 .document(conversionId);
         documentReference.update(
-                Constants.KEY_MESSAGE, message,
+                Constants.KEY_LAST_MESSAGE, message,
                 Constants.KEY_TIMESTAMP, new Date());
     }
 

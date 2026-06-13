@@ -71,6 +71,9 @@ public class RecentConversationsAdapter   extends RecyclerView.Adapter<RecentCon
 
     }
     private Bitmap getConversionImage(String encodedImage){
+        if (encodedImage == null) {
+            return null;
+        }
         byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
